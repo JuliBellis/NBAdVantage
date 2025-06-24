@@ -130,24 +130,26 @@ CREATE TABLE Common_player_info (
 )
 
 CREATE TABLE Draft_combine_stats (
-	season INT,
-	player_id INT PRIMARY KEY FOREIGN KEY REFERENCES Player(id),
-	first_name varchar(50),
-	last_name varchar(50),
-	player_name varchar(101),
-	position varchar(5),
-	height_wo_shoes DECIMAL(6,2),
-	weight DECIMAL(5,1),
-	wingspan DECIMAL(5,2),
-	standing_reach DECIMAL (5,1),
-	body_fat_pct DECIMAL(5,2),
-	standing_vertical_leap DECIMAL(5,2),
-	max_vertical_leap DECIMAL(5,2),
-	lane_agility_time DECIMAL(5,2),
-	three_quarter_sprint DECIMAL(4,2),
-	bench_press INT,
-)
-
+    season INT,
+    player_id INT PRIMARY KEY FOREIGN KEY REFERENCES Player(id),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    player_name VARCHAR(101),
+    position VARCHAR(5),
+    height_wo_shoes DECIMAL(6,2),        
+    height_wo_shoes_ft_in VARCHAR(10),   
+    weight DECIMAL(5,1),                 
+    wingspan DECIMAL(5,2),               
+    wingspan_ft_in VARCHAR(10),          
+    standing_reach DECIMAL(5,2),         
+    standing_reach_ft_in VARCHAR(10),    
+    body_fat_pct DECIMAL(5,2),           
+    standing_vertical_leap DECIMAL(5,2), 
+    max_vertical_leap DECIMAL(5,2),      
+    lane_agility_time DECIMAL(5,2),      
+    three_quarter_sprint DECIMAL(5,2),   
+    bench_press INT,                     
+);
 
 
 CREATE TABLE Team_details (
@@ -191,6 +193,33 @@ CREATE TABLE Game_summary(
 	live_period INT,
 	live_period_time_bcast varchar(20),
 	wh_status char(1)
+)
+CREATE TABLE Other_stats(
+	game_id INT PRIMARY KEY FOREIGN KEY REFERENCES Game(game_id),
+	team_id_home INT FOREIGN KEY REFERENCES Team(id),
+	team_abbreviation_home char(3),
+	team_city_home varchar(25),
+	pts_paint_home INT,
+	pts_2nd_chance_home INT,
+	pts_fb_home INT,
+	largest_lead_home INT,
+	lead_changes INT,
+	times_tied INT,
+	team_turnovers_home INT,
+	total_turnovers_home INT,
+	team_rebounds_home INT,
+	pts_off_to_home INT,
+	team_id_away INT FOREIGN KEY REFERENCES Team(id),
+	team_abbreviation_away char(3),
+	team_city_away varchar(25),
+	pts_paint_away INT,
+	pts_2nd_chance_away INT,
+	pts_fb_away INT,
+	largest_lead_away INT,
+	team_turnovers_away INT,
+	total_turnovers_away INT,
+	team_rebounds_away INT,
+	pts_off_to_away INT,
 )
 
 CREATE TABLE Play_by_play(
