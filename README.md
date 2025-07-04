@@ -30,4 +30,5 @@ Este proyecto ha sido desarrollado utilizando las siguientes herramientas y libr
 
 ## 📈 Resultados y Conclusiones (Resumen)
 
-## 📊 Visualizaciones Clave
+Basándonos en nuestro análisis, nuestra propuesta principal para una alianza estratégica se centra en  Miami Heat y su jugador Jimmy Bulter; han demostrado un rendimiento consistente y su ciudad, Miami, es un punto focal clave para nuestra campaña.
+Como una sólida segunda opción, consideramos al equipo Phoenix Suns. Aunque su rendimiento colectivo no haya sido el más destacado en la última temporada, sus dos jugadores estrella han logrado una performance individual sobresaliente, lo que los convierte en activos muy valiosos para una campaña de marketing.
